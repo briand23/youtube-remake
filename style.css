@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: blueviolet;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 16px;
+
+  display: grid;
+  grid-template-rows: 8vh 82vh 10vh;
+  grid-template-columns: 10vw 90vw;
+  grid-template-areas:
+    "anav aheader"
+    "anav ainner"
+    "anav ainner";
+}
+
+/* When the body has the nav toggled off */
+.nav-off {
+  grid-template-rows: 8vh 92vh;
+  grid-template-areas:
+    "aheader aheader"
+    "ainner ainner";
+}
+
+#header {
+  grid-area: aheader;
+  background-color: aquamarine;
+}
+
+#nav {
+  grid-area: anav;
+
+  background-color: rgb(35, 163, 120);
+}
+.hide {
+  display: none;
+}
+
+.inner-content {
+  grid-area: inner;
+  background-color: rgb(90, 82, 95);
+}
+
+.fa-bars {
+  font-size: 1.4rem;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
